@@ -1,10 +1,9 @@
 import words from "./data/words"
 
-const yellow = ["s", "", "", "", ""]
-const green = ["h", "o", "b", "", ""]
-const allowedLetters = []
-allowedLetters.concat(yellow)
-allowedLetters.concat(green)
+const yellow = ["s", "e", "", "", ""]
+const green = ["h", "o", "", "", ""]
+const allowedLetters: String[] = [...yellow, ...green]
+console.log(allowedLetters)
 
 function arrayEquals(a: String[], b: String[]) {
   return Array.isArray(a) &&
