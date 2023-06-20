@@ -4,8 +4,6 @@ import * as data from "./data/letterProbability.json";
 const yellow = ["s", "e", "", "", ""];
 const green = ["h", "o", "", "", ""];
 const allowedLetters: string[] = [...yellow, ...green].filter((i) => i);
-const allowedEmptySlots = 5 - allowedLetters.length;
-console.log(allowedEmptySlots);
 
 function checker(value: string) {
   // Check the word includes all the allowed letters
