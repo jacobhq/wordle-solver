@@ -8,6 +8,10 @@
       "name": "npm run start",
       "command": "npm run start",
       "runAtStart": true
+    },
+    "npm run build && npm run prob": {
+      "name": "npm run build && npm run prob",
+      "command": "npm run build && npm run prob"
     }
   }
 }

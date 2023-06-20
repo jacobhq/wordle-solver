@@ -7,11 +7,15 @@
   "scripts": {
     "start": "npm run build && npm run runLib",
     "runLib": "node ./dist/index.cjs",
-    "build": "tsup ./index.ts"
+    "prob": "node ./dist/data/probability.cjs",
+    "build": "tsup --entry ./index.ts --entry ./data/probability.ts"
   },
   "devDependencies": {
-    "typescript": "^5.1.3",
-    "tsup": "^6.7.0"
+    "tsup": "^6.7.0",
+    "typescript": "^5.1.3"
   },
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "@types/node": "^20.3.1"
+  }
 }
