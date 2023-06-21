@@ -1,9 +1,25 @@
 import words from "./data/words";
 import * as data from "./data/letterProbability.json";
 
-const yellow = ["s", "e", "", "", ""];
-const green = ["h", "o", "", "", ""];
+const letterProbability = new Map(Object.entries(data));
+
+const yellow = ["d", "", "", "", ""];
+const green = ["a", "u", "", "", ""];
 const allowedLetters: string[] = [...yellow, ...green].filter((i) => i);
+
+function calculateWordProbability(
+  word: string,
+  letterProbabilities: Map<string, number>
+) {
+  let probability = 1;
+
+  for (let i = 0; i < word.length; i++) {
+    const letter = word[i];
+    probability *= letterProbabilities.get(letter);
+  }
+
+  return probability;
+}
 
 function checker(value: string) {
   // Check the word includes all the allowed letters
@@ -27,6 +43,15 @@ function checker(value: string) {
 }
 
 const newWords = words.filter(checker);
-console.log(newWords);
 
-// TODO: Order array by letter probability, check against prev solutions (if yes, then cant happen again)
+// Order array by letter probability
+const sortedWords = newWords.sort((word1, word2) => {
+  const probability1 = calculateWordProbability(word1, letterProbability);
+  const probability2 = calculateWordProbability(word2, letterProbability);
+
+  return probability2 - probability1; // Sort in descending order
+});
+
+console.log(sortedWords);
+
+// TODO: Check against prev solutions (if yes, then cant happen again)

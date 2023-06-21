@@ -5,10 +5,10 @@
   "type": "module",
   "main": "./index.ts",
   "scripts": {
-    "start": "npm run build && npm run runLib",
-    "runLib": "node ./dist/index.cjs",
-    "prob": "node ./dist/data/probability.cjs",
-    "build": "tsup --entry ./index.ts --entry ./data/probability.ts"
+    "start": "npm run build && node ./dist/index.cjs",
+    "prob": "npm run build && node ./dist/lib/probability.cjs",
+    "past": "npm run build && node ./dist/lib/past.cjs",
+    "build": "tsup"
   },
   "devDependencies": {
     "tsup": "^6.7.0",

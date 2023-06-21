@@ -7,11 +7,15 @@
     "npm run start": {
       "name": "npm run start",
       "command": "npm run start",
-      "runAtStart": true
+      "runAtStart": false
     },
-    "npm run build && npm run prob": {
-      "name": "npm run build && npm run prob",
-      "command": "npm run build && npm run prob"
+    "npm run prob": {
+      "name": "npm run prob",
+      "command": "npm run prob"
+    },
+    "npm run past": {
+      "name": "npm run past",
+      "command": "npm run past"
     }
   }
 }
