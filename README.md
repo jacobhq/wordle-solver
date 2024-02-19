@@ -1,5 +1,5 @@
 > [!WARNING]  
-> Unstable, currently unpublished, and WIP. I **will** make breaking changes with no notice/docs until v1.
+> NOTE TO SELF, THIS IS A GOOD PROJECT IDEA!!! Unstable, currently unpublished, and WIP. I **will** make breaking changes with no notice/docs until v1.
 <br />
 
 # wordle-solver
